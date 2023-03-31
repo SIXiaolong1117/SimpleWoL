@@ -112,6 +112,7 @@ int main(int argc, char *argv[])
         cin >> strtmp;
         inputMacAddress = &strtmp[0];
     }
+    
     // 分割输入的 Mac 地址
     if (splitMac(inputMacAddress, macAddress) != true)
     {
@@ -127,20 +128,22 @@ int main(int argc, char *argv[])
         cout << "初始化WinSock失败！" << endl;
         return 1;
     }
-    // 创建套接字
+
+    // 创建 Socket
     SOCKET sock = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
     if (sock == INVALID_SOCKET)
     {
-        cout << "创建套接字失败！" << endl;
+        cout << "创建 Socket 失败！" << endl;
         WSACleanup();
         return 1;
     }
-    // 设置广播选项
+
+    // 设置 Socket 选项
     BOOL broadcast = TRUE;
     result = setsockopt(sock, SOL_SOCKET, SO_BROADCAST, (const char *)&broadcast, sizeof(BOOL));
     if (result == SOCKET_ERROR)
     {
-        cout << "设置广播选项失败！" << endl;
+        cout << "设置 Socket 选项失败！" << endl;
         closesocket(sock);
         WSACleanup();
         return 1;
