@@ -1,0 +1,13 @@
+.vscode
+
+*
+!*.c
+!*.cpp
+!*.cxx
+!*.cc
+!*.h
+!*.md
+!Makefile
+!LICENSE
+!.gitignore
+!*/
