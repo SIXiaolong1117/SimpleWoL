@@ -5,5 +5,10 @@
 ## 使用
 
 ```bash
-SimpleWoL [MacAddress]
+WindowsWoL [MacAddress]
+# or
+LinuxWoL [MacAddress]
+# eg
+WindowsWoL 11:22:33:44:55:66
+WindowsWoL 11-22-33-44-55-66
 ```
