@@ -1,4 +1,7 @@
-﻿#include <iostream>
+﻿// MIT License
+// by Si Xiaolong (GitHub:@Direct5dom E-mail:sixiaolong2021@gmail.com)
+
+#include <iostream>
 
 using namespace std;
 

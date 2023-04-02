@@ -1,3 +1,6 @@
+// MIT License
+// by Si Xiaolong (GitHub:@Direct5dom E-mail:sixiaolong2021@gmail.com)
+
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
